@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+
+/*------General Styles------*/
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+a  {
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #3f3d56;
+    text-align: center;
+}
+
+/*------1st Stage Preloader------*/
+.preload {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(233, 233, 233);
+    z-index: 40;
+    -webkit-animation: preload-out 10s ease-out both;
+    -moz-animation: preload-out 10s ease-out both;
+    animation: preload-out 10s ease-out both;
+    animation-delay: 6s;
+}
+
+@keyframes preload-out {
+    0% {
+    opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*------1st Stage Texts------*/
+.text1 {
+    z-index: 50;
+    position: absolute;
+    top: 140px;
+    left: 878px;
+	-webkit-animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-moz-animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 1s;
+}
+
+.text2 {
+    z-index: 50;
+    position: absolute;
+    top: 140px;
+    left: 740px;
+	-webkit-animation: text-fade-in 10s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-moz-animation: text-fade-in 10s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-fade-in 10s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 6s;        
+}
+
+/*------2nd Stage Texts------*/
+.text3 {
+    z-index: 50;
+    position: absolute;
+    top: 140px;
+    left: 740px;
+	-webkit-animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-moz-animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-fade-in 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 29s;
+}
+
+.text4 {
+    z-index: 50;
+    position: absolute;
+    top: 140px;
+    left: 685px;
+	-webkit-animation: text-fade-in 7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-moz-animation: text-fade-in 7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-fade-in 7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 34s;        
+}
+/*------1st and 2nd Stage Animation------*/
+@keyframes text-fade-in {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  20% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  75% {
+     filter: blur(0.1px);
+  }
+  100% {
+     filter: blur(10px); 
+     opacity: 0;
+  }
+}
+
+/*------3rd/Last Stage Text------*/
+.text5 {
+    z-index: 50;
+    position: absolute;
+    top: 140px;
+    left: 480px;
+	-webkit-animation: text5-fade-in 8s cubic-bezier(0.550, 0.085, 0.680, 0.530)both;
+	-moz-animation: text5-fade-in 8s cubic-bezier(0.550, 0.085, 0.680, 0.530)both;
+	animation: text5-fade-in 8s cubic-bezier(0.550, 0.085, 0.680, 0.530)both;
+    animation-delay: 41s;        
+}
+
+@keyframes text5-fade-in {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  20% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/*------Learn More Button------*/
+.btn {
+    position: absolute;
+    left: 840px;
+    top: 285px;
+    z-index: 50;
+    background: rgb(79,72,189);
+    background: linear-gradient(0deg, rgba(79,72,189,1) 0%, rgba(108,99,255,1) 100%);
+	border-radius:6px;
+	border:1px solid;
+	display:inline-block;
+	cursor:pointer;
+	padding:15px 50px;
+    -webkit-animation: button-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -moz-animation: button-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: button-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 45s;
+}
+
+.btn:hover {
+    background: rgb(63,61,86);
+    background: linear-gradient(0deg, rgba(63,61,86,1) 0%, rgba(122,119,157,1) 100%);
+}
+
+.btn:active {
+    position: absolute;
+	top:302px;
+}
+
+@keyframes button-in {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/*------City Background------*/
+.container {
+    width: 1900px;
+    height: 899px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../img/city-bg.svg);
+}
+
+.apt {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 32px;
+    left: 385px;
+    z-index: 1;
+}
+
+/*------Airplane------*/
+.airplane {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: -200px;
+    z-index: 0;
+    -webkit-animation: plane 10s linear;
+    -moz-animation: plane 10s linear;
+    animation: plane 10s linear;
+    animation-delay: 13s;
+}
+
+@keyframes plane {
+
+    100% {left: 1900px; top:0; width: 60px;}
+
+}
+
+
+/*------Middle People------*/
+.woman {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 610px;
+    left: 1750px;
+}
+
+.broken-foot {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 600px;
+    left: 740px;
+}
+
+.girl-phone {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 600px;
+    left: 1020px;
+}
+
+/*------Doggo and Lady------*/
+.doggo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 685px;
+    left: 1455px;
+    -webkit-animation: jump 1s cubic-bezier(.65,-0.01,0,1.09);
+    -moz-animation: jump 1s cubic-bezier(.65,-0.01,0,1.09);
+    animation: jump 1s cubic-bezier(.65,-0.01,0,1.09);
+    animation-iteration-count: 5;
+    animation-delay: 16s;
+}
+
+@keyframes jump {
+    100% {top:655px;}
+}
+
+.dog-lady {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 595px;
+    left: 1400px;
+}
+
+/*------Workers Bottom Left------*/
+.worker-right {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 660px;
+    left: 240px;
+    z-index: 4;
+}
+
+.worker-left {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 650px;
+    left: 90px;
+    z-index: 5;
+}
+
+/*------Biker------*/
+.biker {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 2000px;
+    top: 620px;
+    z-index: 2;
+    -webkit-animation: riding 8s linear;
+    -moz-animation: riding 8s linear;
+    animation: riding 8s linear;
+    animation-delay: 15s;
+}
+
+@keyframes riding {
+   100% {left: -500px;} 
+}
+
+.rear-wheel {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 32px;
+    left: 72px;
+    -webkit-animation: wheel 0.7s linear infinite;
+    -moz-animation: wheel 0.7s linear infinite;
+    animation: wheel 0.7s linear infinite;
+    
+}
+
+.front-wheel {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 83px;
+    left: -22px;
+    -webkit-animation: wheel 0.7s linear infinite;
+    -moz-animation: wheel 0.7s linear infinite;
+    animation: wheel 0.7s linear infinite;
+}
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*------People Fading------*/
+.container img {
+    -webkit-animation: fade-out 3.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -moz-animation: fade-out 3.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: fade-out 3.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 23s; 
+}
+
+@keyframes fade-out {
+  0% {
+    filter: blur(0.1px);
+  }
+  100% {
+    filter: blur(12px); 
+    opacity: 0;
+  }
+}
